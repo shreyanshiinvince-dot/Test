@@ -11,16 +11,43 @@
             font-family: 'Poppins', Arial, sans-serif;
             background-color: white;
             text-align: center;
+            overflow-x: hidden;
         }
 
-        /* Hearts background */
-        body::before {
-            content: "";
+        /* Left & Right Hearts */
+        .side-hearts {
             position: fixed;
-            inset: 0;
-            background-image: url("https://i.imgur.com/7QpJZKk.png");
-            opacity: 0.15;
-            z-index: -1;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            z-index: 0;
+        }
+
+        .left-hearts {
+            left: 20px;
+        }
+
+        .right-hearts {
+            right: 20px;
+        }
+
+        .heart {
+            font-size: 26px;
+            opacity: 0.9;
+        }
+
+        .red {
+            color: #d43f52;
+        }
+
+        .light-pink {
+            color: #f7b6c2;
+        }
+
+        .dark-pink {
+            color: #b03060;
         }
 
         h1 {
@@ -29,10 +56,10 @@
             margin-top: 30px;
         }
 
-        /* Bunnies image */
+        /* Bunnies */
         .bunnies-img {
             width: 180px;
-            margin-top: 30px;
+            margin-top: 40px;
         }
 
         /* Buttons */
@@ -70,13 +97,13 @@
             align-items: flex-end;
             gap: 30px;
             margin-top: 40px;
+            padding-bottom: 40px;
         }
 
         .bottom-img {
             width: 120px;
         }
 
-        /* Teddy slightly bigger */
         .bottom-img.teddy {
             width: 150px;
         }
@@ -85,13 +112,43 @@
 
 <body>
 
-    <!-- Bunnies -->
+    <!-- LEFT HEARTS -->
+    <div class="side-hearts left-hearts">
+        <span class="heart red">❤️</span>
+        <span class="heart light-pink">💗</span>
+        <span class="heart dark-pink">💖</span>
+        <span class="heart red">❤️</span>
+        <span class="heart light-pink">💗</span>
+        <span class="heart dark-pink">💖</span>
+        <span class="heart red">❤️</span>
+        <span class="heart light-pink">💗</span>
+        <span class="heart dark-pink">💖</span>
+        <span class="heart red">❤️</span>
+        <span class="heart light-pink">💗</span>
+    </div>
+
+    <!-- RIGHT HEARTS -->
+    <div class="side-hearts right-hearts">
+        <span class="heart dark-pink">💖</span>
+        <span class="heart red">❤️</span>
+        <span class="heart light-pink">💗</span>
+        <span class="heart dark-pink">💖</span>
+        <span class="heart red">❤️</span>
+        <span class="heart light-pink">💗</span>
+        <span class="heart dark-pink">💖</span>
+        <span class="heart red">❤️</span>
+        <span class="heart light-pink">💗</span>
+        <span class="heart dark-pink">💖</span>
+        <span class="heart red">❤️</span>
+    </div>
+
+    <!-- BUNNIES IMAGE -->
     <img src="images/Images/teddy.png" alt="Bunnies Hugging" class="bunnies-img">
 
-    <!-- Text -->
+    <!-- TEXT -->
     <h1>WILL YOU BE MY<br>VALENTINE?</h1>
 
-    <!-- Buttons -->
+    <!-- BUTTONS -->
     <div class="buttons">
         <button class="yes-btn" onclick="alert('YAYYY ❤️ I LOVE YOU!')">
             YES, OF COURSE!
@@ -102,7 +159,7 @@
         </button>
     </div>
 
-    <!-- Bottom images -->
+    <!-- BOTTOM IMAGES -->
     <div class="bottom-container">
         <img src="images/Images/chocolates.png" alt="Chocolates" class="bottom-img">
         <img src="images/Images/Teddybear.png" alt="Teddy Bear" class="bottom-img teddy">
