@@ -18,32 +18,33 @@
             position: relative;
         }
 
-        /* Side Hearts Decor */
+        /* Side Hearts - Adjusted for size and look */
         .hearts-decor {
             position: absolute;
             top: 0;
             bottom: 0;
-            width: 100px;
+            width: 150px;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
             z-index: 1;
         }
-        .left-hearts { left: 20px; }
-        .right-hearts { right: 20px; }
+        .left-hearts { left: 10px; }
+        .right-hearts { right: 10px; }
         
         .heart {
-            font-size: 35px;
-            filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1));
+            font-size: 60px; /* Much larger hearts */
+            filter: drop-shadow(4px 4px 10px rgba(0,0,0,0.1));
+            user-select: none;
         }
 
-        /* Main White Card */
+        /* Main Content Card */
         .card {
             background: white;
-            padding: 50px;
+            padding: 60px 40px;
             border-radius: 60px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
             text-align: center;
             width: 85%;
             max-width: 650px;
@@ -51,95 +52,88 @@
             z-index: 2;
         }
 
-        /* Bunnies (using your filename: teddy.png) */
         .bunnies-img {
-            width: 220px;
-            margin-top: -80px; /* Pulls it slightly up over the edge like the mockup */
+            width: 250px;
+            margin-top: -120px; /* Floating look */
+            margin-bottom: 20px;
         }
 
         h1 {
             color: #d63384;
-            font-size: 2.8rem;
-            margin: 25px 0;
+            font-size: 3rem;
+            margin: 20px 0;
             font-weight: bold;
+            line-height: 1.2;
         }
 
         .buttons {
             display: flex;
-            gap: 25px;
+            gap: 20px;
             justify-content: center;
             margin-top: 30px;
         }
 
         .btn {
-            padding: 18px 35px;
-            font-size: 1.2rem;
+            padding: 18px 40px;
+            font-size: 1.3rem;
             font-weight: bold;
             border: none;
             border-radius: 50px;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.3s ease;
         }
 
         .btn-yes {
             background-color: #e63946;
             color: white;
+            box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
         }
 
         .btn-no {
             background-color: #fce4ec;
             color: #d63384;
-            opacity: 0.9;
         }
 
         .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: scale(1.1);
         }
 
         /* Bottom Assets */
         .bottom-assets {
             position: absolute;
-            bottom: 10px;
+            bottom: 20px;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            gap: 40px;
+            gap: 60px;
             z-index: 3;
         }
 
         .bottom-img {
-            width: 160px;
+            width: 180px;
             height: auto;
-        }
-
-        /* Responsive tweak for smaller screens */
-        @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            .bottom-img { width: 100px; }
-            .bunnies-img { width: 150px; }
         }
     </style>
 </head>
 <body>
 
     <div class="hearts-decor left-hearts">
-        <span class="heart" style="color: white;">🤍</span>
-        <span class="heart" style="color: #e63946;">❤️</span>
-        <span class="heart" style="color: #e63946;">❤️</span>
-        <span class="heart" style="color: white;">🤍</span>
+        <span class="heart" style="color: white; transform: rotate(-15deg);">🤍</span>
+        <span class="heart" style="color: #e63946; transform: rotate(10deg);">❤️</span>
+        <span class="heart" style="color: #e63946; transform: rotate(-20deg);">❤️</span>
+        <span class="heart" style="color: white; transform: rotate(15deg);">🤍</span>
     </div>
 
     <div class="hearts-decor right-hearts">
-        <span class="heart" style="color: #e63946;">❤️</span>
-        <span class="heart" style="color: white;">🤍</span>
-        <span class="heart" style="color: #e63946;">❤️</span>
-        <span class="heart" style="color: white;">🤍</span>
+        <span class="heart" style="color: #e63946; transform: rotate(20deg);">❤️</span>
+        <span class="heart" style="color: white; transform: rotate(-10deg);">🤍</span>
+        <span class="heart" style="color: #e63946; transform: rotate(15deg);">❤️</span>
+        <span class="heart" style="color: white; transform: rotate(-15deg);">🤍</span>
     </div>
 
     <div class="card">
-        <img src="teddy.png" alt="Bunnies Hugging" class="bunnies-img">
+        <img src="images/Images/teddy.png" alt="Bunnies Hugging" class="bunnies-img">
         <h1>WILL YOU BE MY VALENTINE?</h1>
         <div class="buttons">
             <button class="btn btn-yes" onclick="alert('Yay! ❤️')">YES, OF COURSE!</button>
@@ -148,8 +142,8 @@
     </div>
 
     <div class="bottom-assets">
-        <img src="chocolates.png" alt="Chocolates" class="bottom-img">
-        <img src="Teddybear.png" alt="Teddy Bear" class="bottom-img">
+        <img src="images/Images/chocolates.png" alt="Chocolates" class="bottom-img">
+        <img src="images/Images/Teddybear.png" alt="Teddy Bear" class="bottom-img">
     </div>
 
 </body>
