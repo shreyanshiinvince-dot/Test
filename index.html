@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffc0cb; /* Pink Background */
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Side Hearts Decor */
+        .hearts-decor {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 1;
+        }
+        .left-hearts { left: 20px; }
+        .right-hearts { right: 20px; }
+        
+        .heart {
+            font-size: 35px;
+            filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1));
+        }
+
+        /* Main White Card */
+        .card {
+            background: white;
+            padding: 50px;
+            border-radius: 60px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 85%;
+            max-width: 650px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Bunnies (using your filename: teddy.png) */
+        .bunnies-img {
+            width: 220px;
+            margin-top: -80px; /* Pulls it slightly up over the edge like the mockup */
+        }
+
+        h1 {
+            color: #d63384;
+            font-size: 2.8rem;
+            margin: 25px 0;
+            font-weight: bold;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 18px 35px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-yes {
+            background-color: #e63946;
+            color: white;
+        }
+
+        .btn-no {
+            background-color: #fce4ec;
+            color: #d63384;
+            opacity: 0.9;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Bottom Assets */
+        .bottom-assets {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 40px;
+            z-index: 3;
+        }
+
+        .bottom-img {
+            width: 160px;
+            height: auto;
+        }
+
+        /* Responsive tweak for smaller screens */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .bottom-img { width: 100px; }
+            .bunnies-img { width: 150px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hearts-decor left-hearts">
+        <span class="heart" style="color: white;">🤍</span>
+        <span class="heart" style="color: #e63946;">❤️</span>
+        <span class="heart" style="color: #e63946;">❤️</span>
+        <span class="heart" style="color: white;">🤍</span>
+    </div>
+
+    <div class="hearts-decor right-hearts">
+        <span class="heart" style="color: #e63946;">❤️</span>
+        <span class="heart" style="color: white;">🤍</span>
+        <span class="heart" style="color: #e63946;">❤️</span>
+        <span class="heart" style="color: white;">🤍</span>
+    </div>
+
+    <div class="card">
+        <img src="teddy.png" alt="Bunnies Hugging" class="bunnies-img">
+        <h1>WILL YOU BE MY VALENTINE?</h1>
+        <div class="buttons">
+            <button class="btn btn-yes" onclick="alert('Yay! ❤️')">YES, OF COURSE!</button>
+            <button class="btn btn-no" onclick="window.location.href='no.html'">NO, I WON'T</button>
+        </div>
+    </div>
+
+    <div class="bottom-assets">
+        <img src="chocolates.png" alt="Chocolates" class="bottom-img">
+        <img src="Teddybear.png" alt="Teddy Bear" class="bottom-img">
+    </div>
+
+</body>
+</html>
