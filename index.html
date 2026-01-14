@@ -2,151 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Will You Be My Valentine?</title>
+
     <style>
         body {
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #fbc2c4; /* Matching the soft pink in your image */
-            font-family: 'Arial', sans-serif;
-            overflow: hidden;
-            position: relative;
-        }
-
-        /* Large Side Hearts Decor */
-        .side-hearts {
-            position: absolute;
-            top: 0;
-            height: 100%;
-            width: 15%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 1;
-        }
-        .left { left: 0; }
-        .right { right: 0; }
-
-        .heart-shape {
-            font-size: 80px; /* Big artistic size */
-            filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.1));
-            line-height: 1;
-        }
-
-        /* Central White Box */
-        .white-card {
-            background: white;
-            width: 65%;
-            max-width: 800px;
-            padding: 80px 40px;
-            border-radius: 80px; /* Very rounded corners like the image */
-            box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: white;
             text-align: center;
-            position: relative;
-            z-index: 2;
         }
 
-        /* Bunny Image Positioning */
-        .center-bunnies {
-            width: 250px;
-            position: absolute;
-            top: -120px; /* Floating over the top edge */
-            left: 50%;
-            transform: translateX(-50%);
+        /* Hearts background */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background-image: url("https://i.imgur.com/7QpJZKk.png");
+            opacity: 0.15;
+            z-index: -1;
         }
 
         h1 {
-            color: #d63384;
-            font-size: 3.5rem;
-            margin: 40px 0;
-            font-weight: 800;
-            letter-spacing: -1px;
+            color: #d43f52;
+            font-size: 42px;
+            margin-top: 30px;
         }
 
-        /* Buttons matching the image style */
-        .btn-container {
-            display: flex;
-            gap: 25px;
-            justify-content: center;
-            margin-top: 20px;
+        /* Bunnies image */
+        .bunnies-img {
+            width: 180px;
+            margin-top: 30px;
         }
 
-        .btn {
-            padding: 20px 45px;
-            font-size: 1.4rem;
-            font-weight: bold;
+        /* Buttons */
+        .buttons {
+            margin-top: 25px;
+        }
+
+        button {
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-size: 16px;
             border: none;
-            border-radius: 60px;
             cursor: pointer;
-            transition: transform 0.2s;
+            margin: 10px;
         }
 
         .yes-btn {
-            background-color: #e63946;
+            background-color: #d43f52;
             color: white;
-            box-shadow: 0 10px 20px rgba(230, 57, 70, 0.3);
         }
 
         .no-btn {
-            background-color: #fce4ec;
-            color: #d63384;
+            background-color: #f2c1c7;
+            color: #7a1f2b;
         }
 
-        .btn:hover { transform: scale(1.05); }
+        button:hover {
+            transform: scale(1.05);
+        }
 
-        /* Bottom Images */
-        .bottom-decor {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
+        /* Bottom images */
+        .bottom-container {
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            gap: 40px;
-            z-index: 3;
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .bottom-img {
-            width: 180px;
-            height: auto;
+            width: 120px;
+        }
+
+        /* Teddy slightly bigger */
+        .bottom-img.teddy {
+            width: 150px;
         }
     </style>
 </head>
+
 <body>
 
-    <div class="side-hearts left">
-        <div class="heart-shape" style="color: white; transform: rotate(-10deg);">🤍</div>
-        <div class="heart-shape" style="color: #e63946; transform: rotate(15deg);">❤️</div>
-        <div class="heart-shape" style="color: #e63946; transform: rotate(-20deg);">❤️</div>
-        <div class="heart-shape" style="color: white; transform: rotate(10deg);">🤍</div>
+    <!-- Bunnies -->
+    <img src="images/Images/teddy.png" alt="Bunnies Hugging" class="bunnies-img">
+
+    <!-- Text -->
+    <h1>WILL YOU BE MY<br>VALENTINE?</h1>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <button class="yes-btn" onclick="alert('YAYYY ❤️ I LOVE YOU!')">
+            YES, OF COURSE!
+        </button>
+
+        <button class="no-btn" onclick="window.location.href='no.html'">
+            NO, I WON'T
+        </button>
     </div>
 
-    <div class="side-hearts right">
-        <div class="heart-shape" style="color: #e63946; transform: rotate(20deg);">❤️</div>
-        <div class="heart-shape" style="color: white; transform: rotate(-15deg);">🤍</div>
-        <div class="heart-shape" style="color: #e63946; transform: rotate(5deg);">❤️</div>
-        <div class="heart-shape" style="color: white; transform: rotate(-25deg);">🤍</div>
-    </div>
-
-    <div class="white-card">
-        <img src="images/Images/teddy.png" alt="Bunnies" class="center-bunnies">
-        <h1>WILL YOU BE MY VALENTINE?</h1>
-        
-        <div class="btn-container">
-            <button class="btn yes-btn" onclick="alert('Yay! See you on the 14th! ❤️')">YES, OF COURSE!</button>
-            <button class="btn no-btn" onclick="window.location.href='no.html'">NO, I WON'T</button>
-        </div>
-    </div>
-
-    <div class="bottom-decor">
+    <!-- Bottom images -->
+    <div class="bottom-container">
         <img src="images/Images/chocolates.png" alt="Chocolates" class="bottom-img">
-        <img src="images/Images/Teddybear.png" alt="Teddy Bear" class="bottom-img">
+        <img src="images/Images/Teddybear.png" alt="Teddy Bear" class="bottom-img teddy">
     </div>
 
 </body>
